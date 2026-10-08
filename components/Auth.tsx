@@ -554,13 +554,14 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                 {/* Header - Company logo pulled from Settings > Profile > Company Branding */}
                 <div className="bg-white p-6 text-center rounded-t-2xl">
                     <div className="mx-auto w-full h-40 flex items-center justify-center relative overflow-hidden">
-                        {systemSettings?.logo ? (
-                            <img src={systemSettings.logo} alt={`${systemSettings.companyName || 'Company'} logo`} className="w-full h-full object-contain rounded-xl" />
-                        ) : (
-                            <div className="w-full h-full flex items-center justify-center text-gray-300 text-sm font-medium">
-                                {systemSettings?.companyName || 'Company Logo'}
-                            </div>
-                        )}
+                        <img 
+                            src={systemSettings?.logo || '/logo.png'} 
+                            alt={`${systemSettings?.companyName || 'TaskMe Realty'} logo`} 
+                            className="w-full h-full object-contain rounded-xl"
+                            onError={(e) => {
+                                (e.currentTarget as HTMLImageElement).src = '/favicon.png';
+                            }}
+                        />
                     </div>
                 </div>
 

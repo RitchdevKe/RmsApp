@@ -506,7 +506,14 @@ const Auth: React.FC<AuthProps> = ({ onLogin }) => {
                 {/* Header - Rectangular Logo Version on White Background - Read Only */}
                 <div className="bg-white p-6 text-center rounded-t-2xl">
                     <div className="mx-auto w-full h-40 flex items-center justify-center relative overflow-hidden">
-                        <img src="/logo.jpeg" alt="Logo" className="w-full h-full object-contain rounded-xl" />
+                        <img 
+                            src="/logo.png" 
+                            alt="Logo" 
+                            className="w-full h-full object-contain rounded-xl"
+                            onError={(e) => {
+                                (e.currentTarget as HTMLImageElement).src = '/favicon.png';
+                            }}
+                        />
                     </div>
                 </div>
 

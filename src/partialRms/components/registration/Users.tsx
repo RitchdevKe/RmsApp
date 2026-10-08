@@ -597,6 +597,7 @@ const Users: React.FC = () => {
         const base = allUsers.filter(u => activeCategory.roles.includes(u.role));
         // Tenants are auto-filtered by property/tenant displayed list. Other categories match appScope.
         return base.filter(u => {
+            if (activeCategoryId === 'system' || u.role === 'Super Admin') return true;
             if (u.role === 'Tenant') {
                 const prop = (rawProperties || []).find(p => p.id === u.fullObject.propertyId || p.name === u.fullObject.propertyName);
                 const isPartialProp = prop ? prop.managementType === 'Partial' : false;
