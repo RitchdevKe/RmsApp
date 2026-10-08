@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "skipLibCheck": true,
+    "types": ["node", "vite/client"],
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "allowJs": true,
+    "jsx": "react-jsx",
+    "paths": { "@/*": ["./*"] },
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "noCheck": true,
+    "strict": false,
+    "noImplicitAny": false,
+    "strictNullChecks": false,
+    "noImplicitThis": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": false
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "supabase/functions",
+    "dist",
+    "components/accounting/FinancialStatements.tsx",
+    "components/landlords/ActiveLandlords.tsx",
+    "components/operations/TaskManagement.tsx",
+    "components/payments/LandlordPayouts.tsx",
+    "components/registration/Users.tsx",
+    "components/tenants/ActiveTenants.tsx",
+    "components/userAppPortal/LandlordsPortal.tsx",
+    "components/userAppPortal/ReferralFliers.tsx",
+    "context/DataContext.tsx",
+    "src/partialRms"
+  ]
+}

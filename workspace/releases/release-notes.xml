@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<releaseNotes version="1" date="2026-03-06">
+  <file path="components/Auth.tsx" module="auth">
+    <description>Removed all local authentication logic, mock credentials, and password hashing, leaving only the UI interface.</description>
+  </file>
+</releaseNotes>

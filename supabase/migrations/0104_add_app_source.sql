@@ -1,0 +1,34 @@
+-- Migration to add source environment separation
+
+ALTER TABLE public.tenants ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.landlords ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.properties ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.vendors ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.tasks ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.bills ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.invoices ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.quotations ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.landlord_applications ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.tenant_applications ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.offboarding_records ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.landlord_offboarding_records ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.funds ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.investments ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.withdrawal_requests ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.renovation_investors ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.rf_transactions ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.renovation_project_bills ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.messages ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.notifications ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.workflows ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.automation_rules ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.escalation_rules ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.scheduled_reports ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.tax_records ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.leads ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.fundi_jobs ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.marketing_banners ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.geospatial_data ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.units ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.leases ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';
+ALTER TABLE public.payments ADD COLUMN IF NOT EXISTS app_source VARCHAR DEFAULT 'full';

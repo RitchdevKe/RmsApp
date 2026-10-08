@@ -1,0 +1,56 @@
+{
+  "name": "task-me-full-partial-rms",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=8080 --host=0.0.0.0",
+    "build": "vite build",
+    "build:dev": "vite build --mode development",
+    "preview": "vite preview",
+    "supabase:start": "supabase start",
+    "supabase:stop": "supabase stop",
+    "supabase:reset": "supabase db reset && supabase db seed"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.106.2",
+    "@tanstack/query-sync-storage-persister": "^5.100.5",
+    "@tanstack/react-query": "^5.90.21",
+    "@tanstack/react-query-persist-client": "^5.100.5",
+    "chart.js": "^4.5.1",
+    "lucide-react": "^1.17.0",
+    "react": "^19.2.0",
+    "react-chartjs-2": "^5.3.1",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.4",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.0.0",
+    "autoprefixer": "^10.5.4",
+    "postcss": "^8.5.23",
+    "tailwindcss": "^3.4.19",
+    "typescript": "~5.8.2",
+    "vite": "^6.4.1",
+    "vite-plugin-pwa": "^1.3.0"
+  },
+  "description": "<div align=\"center\">\r <img width=\"1200\" height=\"475\" alt=\"GHBanner\" src=\"https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6\" />\r </div>",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JM-GATHONI/TaskMe-CMS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JM-GATHONI/TaskMe-CMS/issues"
+  },
+  "homepage": "https://github.com/JM-GATHONI/TaskMe-CMS#readme"
+}

@@ -1,0 +1,79 @@
+name: Deploy Supabase Edge Functions
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "supabase/functions/mpesa-stk-push/**"
+      - "supabase/functions/mpesa-callback/**"
+      - "supabase/functions/mpesa-c2b-register-urls/**"
+      - "supabase/functions/c2b-validation/**"
+      - "supabase/functions/c2b-confirmation/**"
+      - "supabase/functions/mpesa-pull-transactions/**"
+      - "supabase/functions/mpesa-verify-transaction/**"
+      - "supabase/functions/website-direct-stk-push/**"
+      - "supabase/functions/website-listings/**"
+      - ".github/workflows/deploy-functions.yml"
+
+jobs:
+  deploy:
+    name: Deploy Edge Functions
+    runs-on: ubuntu-latest
+    env:
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy mpesa-stk-push
+        run: |
+          npx --yes supabase functions deploy mpesa-stk-push \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }} \
+            --no-verify-jwt
+
+      - name: Deploy mpesa-callback
+        run: |
+          npx --yes supabase functions deploy mpesa-callback \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }} \
+            --no-verify-jwt
+
+      - name: Deploy mpesa-c2b-register-urls
+        run: |
+          npx --yes supabase functions deploy mpesa-c2b-register-urls \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }}
+
+      - name: Deploy c2b-validation
+        run: |
+          npx --yes supabase functions deploy c2b-validation \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }} \
+            --no-verify-jwt
+
+      - name: Deploy c2b-confirmation
+        run: |
+          npx --yes supabase functions deploy c2b-confirmation \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }} \
+            --no-verify-jwt
+
+      - name: Deploy mpesa-pull-transactions
+        run: |
+          npx --yes supabase functions deploy mpesa-pull-transactions \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }}
+
+      - name: Deploy mpesa-verify-transaction
+        run: |
+          npx --yes supabase functions deploy mpesa-verify-transaction \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }}
+
+      - name: Deploy website-direct-stk-push
+        run: |
+          npx --yes supabase functions deploy website-direct-stk-push \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }} \
+            --no-verify-jwt
+
+      - name: Deploy website-listings
+        run: |
+          npx --yes supabase functions deploy website-listings \
+            --project-ref ${{ secrets.SUPABASE_PROJECT_REF }} \
+            --no-verify-jwt

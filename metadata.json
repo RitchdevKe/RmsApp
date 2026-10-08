@@ -1,0 +1,6 @@
+{
+  "name": "Task-Me Full/Partial Rms",
+  "description": "A professional, enterprise-grade property and investment management dashboard for TaskMe Realty.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
