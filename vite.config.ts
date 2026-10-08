@@ -64,8 +64,8 @@ export default defineConfig(({ mode }) => {
               },
             },
             {
-              // Supabase API — NetworkFirst so data is always fresh; falls back to cache when offline
-              urlPattern: /^https:\/\/.*\.supabase\.co\/.*/i,
+              // TaskMe API — NetworkFirst so data is always fresh
+              urlPattern: /^https:\/\/app\.task-me\.ke\/(rest|auth)\/.*/i,
               handler: "NetworkFirst",
               options: {
                 cacheName: "supabase-api-cache",

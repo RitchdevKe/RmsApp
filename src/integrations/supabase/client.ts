@@ -2,8 +2,8 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://xdaznrwcitsuwlvwxojp.supabase.co';
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY || 'sb_publishable_3vRQKAboZYnKWHR6uH6iyg_YQ2JWc4A';
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL || 'https://app.task-me.ke';
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY || import.meta.env.VITE_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlzcyI6InN1cGFiYXNlIiwiaWF0IjoxNzI4MzQ1NjAwLCJleHAiOjIwNDM5MDcyMDB9.ssX5ZjUVUx6x1UIp7mccAStDdzIfqAwlzxixp95tc24';
 
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
